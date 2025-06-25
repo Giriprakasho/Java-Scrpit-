@@ -1,0 +1,27 @@
+<h1>Guess the Number!</h1>
+<input id="n" type="number">
+<p id="pp">H</p>
+<p id="r">Rank:10</p>
+<button onclick="rand()">Check</button>
+<script>
+    var a=document.getElementById("n")  
+    var pp=document.getElementById("pp")   
+    var r=document.getElementById("r")
+    score=10
+    function rand()
+    {
+        var rand=Math.floor(Math.random()*10)+1
+ 
+        var g=a.value;
+        if(rand==g)
+    {
+        pp.textContent="Correct"
+    }
+    else{
+        score-=1
+        pp.textContent="Wrong! The generated number is"+rand
+        r.textContent="Rank"+score
+    }
+
+    }
+</script>
